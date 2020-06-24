@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="WebForms_MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>
+         <asp:ContentPlaceHolder ID="title" runat="server">
+        </asp:ContentPlaceHolder>
+    </title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="../Style%20Sheet/MasterPage.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <nav>
+            <div class="logo">NayyeR CarpeT</div>
+            <ul>
+                <li><a href="CompanyTable.aspx">Company Table</a></li>
+                <li><a href="BillTable.aspx">Bill Table</a></li>
+                <li><a href="ReceiveTable.aspx">Receive Table</a></li>
+                <li>
+                    <a href="#">Reports</a>
+                    <ul>
+                        <li><a href="GeneralLedger1.aspx">General Ledger 1</a></li>
+                        <li><a href="GeneralLedger2.aspx">General Ledger 2</a></li>
+                    </ul>
+                </li>
+                <li><asp:LinkButton CssClass="linkbuttonCss" ID="btn_LogOut" runat="server" OnClick="btn_LogOut_Click">Logout</asp:LinkButton></li>
+            </ul>
+        </nav>
+
+            <asp:ContentPlaceHolder id="ContentBody" runat="server">
+            </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>
