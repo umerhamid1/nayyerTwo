@@ -6,6 +6,11 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="head" Runat="Server">
    <link href="bootstrap-4.4.1/css/bootstrap.css" rel="stylesheet" />
+    
+  <%--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css" rel="stylesheet" />--%>
+
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentBody" Runat="Server">
@@ -24,8 +29,11 @@
                                         <div class="form-group row">
 											<label class="col-sm-4 control-label text-sm-right pt-2">Company Name <span class="required">*</span></label>
 											<div class="col-sm-8">
-                                                <asp:DropDownList ID="DropDownList1" runat="server" data-plugin-selectTwo class="form-control populate" Width="275px"></asp:DropDownList>
-											</div>
+                                                <asp:DropDownList ID="DropDownList1" runat="server" data-plugin-selectTwo class="form-control populate" data-height="240" Width="275px"></asp:DropDownList>
+											    <%--<script>
+											        $('#<%=DropDownList1.ClientID%>').chosen();
+                                                </script> --%>
+                                            </div>
 										</div>
 
                                         <div class="form-group row">
@@ -73,6 +81,7 @@
 										<div class="row justify-content-end">
 											<div class="col-sm-8">
 												<asp:Button ID="btnB_Submit" runat="server" class="btn btn-primary" Text="Submit" OnClick="btnB_Submit_Click"/>
+                                                <%--<asp:Button ID="btn_Reset" runat="server" class="btn btn-danger" Text="Reset"/>--%>
 												<button type="reset" class="btn btn-danger" >Reset</button>
 											</div>
 										</div>

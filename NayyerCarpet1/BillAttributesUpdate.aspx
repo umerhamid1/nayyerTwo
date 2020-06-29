@@ -72,8 +72,7 @@
 										<div class="row justify-content-end">
 											<div class="col-sm-8">
 												<asp:Button ID="btnB_Update" runat="server" class="btn btn-primary" Text="Update" OnClick="btnB_Update_Click"/>
-                                                <asp:Button ID="Button1" runat="server" class="btn btn-primary" Text="ok" OnClick="Button1_Click"/>
-												<%--<button type="reset" class="btn btn-danger" >Reset</button>--%>
+                                               <%--<button type="reset" class="btn btn-danger" >Reset</button>--%>
 											</div>
 										</div>
 									</footer>
@@ -82,5 +81,7 @@
 						</div>
 					</div>
 					<!-- end: page -->
+
+    
 </asp:Content>
 

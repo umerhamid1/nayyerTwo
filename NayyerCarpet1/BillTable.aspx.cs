@@ -14,11 +14,6 @@ public partial class BillTable : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        //if (Session["Email"] == null)
-        //{
-        //    Response.Redirect("Login.aspx");
-        //}
-
         if (Page.IsPostBack == false)
         {
             string sql = "SELECT DISTINCT [CompanyName] FROM [BillReceive] WHERE (Jrn_Type = N'Sale')";
@@ -32,6 +27,11 @@ public partial class BillTable : System.Web.UI.Page
                 DropDownList1.Items.Add(r["CompanyName"].ToString());
             }
         }
+
+        //if (Session["Email"] == null)
+        //{
+        //    Response.Redirect("Login.aspx");
+        //}
     }
 
     protected void btnB_Search_Click(object sender, EventArgs e)

@@ -39,18 +39,13 @@ public partial class CustomerBill : System.Web.UI.Page
 
             txtCompany_Contact.Text = ds.Tables[0].Rows[0]["Contact"].ToString();
             Contact = ds.Tables[0].Rows[0]["Contact"].ToString();
-
-            //txtB_Description.Text = ds.Tables[0].Rows[0]["Description"].ToString();
-            //Description = ds.Tables[0].Rows[0]["Description"].ToString();
-
-            //txtB_Amount.Text = ds.Tables[0].Rows[0]["BillAmount"].ToString();
-            //bilAmt = int.Parse(ds.Tables[0].Rows[0]["BillAmount"].ToString());
-
-            //txtB_Date.Text = Convert.ToDateTime(ds.Tables[0].Rows[0]["Date"]).ToString("MM/dd/yyyy");
-            //Date = Convert.ToDateTime(ds.Tables[0].Rows[0]["Date"]).ToString("MM/dd/yyyy");
-
         }
         con.Close();
+
+        //if (Session["Email"] == null)
+        //{
+        //    Response.Redirect("Login.aspx");
+        //}
     }
 
     protected void btnUpdate_Click(object sender, EventArgs e)

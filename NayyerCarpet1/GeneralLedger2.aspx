@@ -40,13 +40,26 @@
 										    </div>
 										</div>
 
+                                        <div class="form-group row">
+											<label class="col-sm-4 control-label text-sm-right pt-2">Download Report</label>
+											<div class="col-sm-8">
+                                                <asp:DropDownList ID="ddlFileFormat" runat="server"  class="form-control populate" Width="275px">
+                                                    <asp:ListItem Text="Select Download File In "></asp:ListItem>
+                                                    <asp:ListItem Text="PDF" Value="PDF"></asp:ListItem>  
+                                                    <asp:ListItem Text="WORD" Value="WORD"></asp:ListItem>  
+                                                    <asp:ListItem Text="EXCEL" Value="EXCEL"></asp:ListItem> 
+                                                    <asp:ListItem Text="Image" Value="IMAGE"></asp:ListItem> 
+                                                </asp:DropDownList>
+											</div>
+										</div>
+
 									</div>
 									<footer class="card-footer">
 										<div class="row justify-content-end">
 											<div class="col-sm-8">
 												<asp:Button ID="btnViewReport" runat="server" class="btn btn-primary" Text="View Report" OnClick="btnViewReport_Click"/>
 												<button type="reset" class="btn btn-danger" >Reset</button>
-                                                <%--<asp:Button ID="btnB_Print" runat="server" class="btn btn-success" Text="Print"/>--%>
+                                                <asp:Button ID="btnB_Print" runat="server" class="btn btn-success" Text="Print" OnClick="btnB_Print_Click"/>
 											</div>
 										</div>
 									</footer>

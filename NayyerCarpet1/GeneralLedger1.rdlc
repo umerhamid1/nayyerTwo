@@ -1270,7 +1270,7 @@
             <Value>=Fields!Date.Value</Value>
           </SortExpression>
         </SortExpressions>
-        <Top>1.86457in</Top>
+        <Top>2.48957in</Top>
         <Left>0.26958in</Left>
         <Height>1.97918in</Height>
         <Width>12.93107in</Width>
@@ -1305,7 +1305,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox8</rd:DefaultName>
-        <Top>0.14458in</Top>
+        <Top>0.89458in</Top>
         <Left>0.26958in</Left>
         <Height>0.41667in</Height>
         <Width>2.28213in</Width>
@@ -1339,7 +1339,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox10</rd:DefaultName>
-        <Top>0.80083in</Top>
+        <Top>1.55083in</Top>
         <Left>0.26958in</Left>
         <Height>0.29167in</Height>
         <Width>1.60417in</Width>
@@ -1372,7 +1372,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox12</rd:DefaultName>
-        <Top>0.80083in</Top>
+        <Top>1.55083in</Top>
         <Left>1.99875in</Left>
         <Height>0.29167in</Height>
         <Width>2.82291in</Width>
@@ -1406,7 +1406,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox21</rd:DefaultName>
-        <Top>1.3425in</Top>
+        <Top>2.0925in</Top>
         <Left>0.26958in</Left>
         <Height>0.29167in</Height>
         <Width>0.61458in</Width>
@@ -1440,7 +1440,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox22</rd:DefaultName>
-        <Top>1.3425in</Top>
+        <Top>2.0925in</Top>
         <Left>0.95361in</Left>
         <Height>0.29167in</Height>
         <Width>1.21269in</Width>
@@ -1474,7 +1474,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox22</rd:DefaultName>
-        <Top>1.3425in</Top>
+        <Top>2.0925in</Top>
         <Left>2.69061in</Left>
         <Height>0.29167in</Height>
         <Width>1.21269in</Width>
@@ -1509,7 +1509,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox21</rd:DefaultName>
-        <Top>1.3425in</Top>
+        <Top>2.0925in</Top>
         <Left>2.23574in</Left>
         <Height>0.29167in</Height>
         <Width>0.38542in</Width>
@@ -1525,16 +1525,54 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
+      <Textbox Name="Textbox16">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Nayyer Carpet Karachi</Value>
+                <Style>
+                  <FontSize>20pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <Color>#0066ff</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>0.32812in</Top>
+        <Left>5.16574in</Left>
+        <Height>0.4375in</Height>
+        <Width>3.15041in</Width>
+        <ZIndex>8</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
-    <Height>3.97917in</Height>
+    <Height>5.09375in</Height>
     <Style />
   </Body>
   <Width>13.4819in</Width>
   <Page>
-    <LeftMargin>1in</LeftMargin>
-    <RightMargin>1in</RightMargin>
-    <TopMargin>1in</TopMargin>
-    <BottomMargin>1in</BottomMargin>
+    <PageHeight>8in</PageHeight>
+    <PageWidth>14.5in</PageWidth>
+    <LeftMargin>0.5in</LeftMargin>
+    <RightMargin>0.5in</RightMargin>
+    <TopMargin>0.5in</TopMargin>
+    <BottomMargin>0.5in</BottomMargin>
     <Style />
   </Page>
   <AutoRefresh>0</AutoRefresh>

@@ -69,6 +69,11 @@ public partial class CustomerBill : System.Web.UI.Page
             }
             con.Close();
         }
+
+        //if (Session["Email"] == null)
+        //{
+        //    Response.Redirect("Login.aspx");
+        //}
     }
 
     protected void btnR_Update_Click(object sender, EventArgs e)

@@ -69,6 +69,11 @@ public partial class CustomerBill : System.Web.UI.Page
             }
             con.Close();
         }
+
+        //if (Session["Email"] == null)
+        //{
+        //    Response.Redirect("Login.aspx");
+        //}
     }
 
     protected void btnB_Update_Click(object sender, EventArgs e)
@@ -76,18 +81,16 @@ public partial class CustomerBill : System.Web.UI.Page
         if (Page.IsValid)
         {
             con.Open();
-           // SqlCommand cmd1 = new SqlCommand("Insert into OldDataBillReceive values('" + TableName + "','" + 0 + "','" + VrNo + "','" + Jrn_Type + "','" + CompanyName + "','" + Description + "','" + bilAmt + "','" + 0 + "','" + Date + "','" + 0 + "','" + 0 + "','" + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + "')", con);
-            //cmd1.ExecuteNonQuery();
-          //  con.Close();
+            SqlCommand cmd1 = new SqlCommand("Insert into OldDataBillReceive values('" + TableName + "','" + 0 + "','" + VrNo + "','" + Jrn_Type + "','" + CompanyName + "','" + Description + "','" + bilAmt + "','" + 0 + "','" + Date + "','" + 0 + "','" + 0 + "','" + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + "')", con);
+            cmd1.ExecuteNonQuery();
+            con.Close();
 
             var a = "UPDATE       BillReceive"+
           "  SET                VrNo = '" + txtB_Vr.Text + "', Jrn_Type = '" + lblB_Sale.Text + "', CompanyName ='" + DropDownList1.Text + "' , Description = '" + txtB_Description.Text + "', ReceiveAmount = '" + 0 + "', BillAmount = '" + txtB_Amount.Text + "', Date = '" + txtB_Date.Text + "'"
             +  "  WHERE        (VrNo = '" + txtB_Vr.Text + "')";
 
-          //  con.Open();
-
-            SqlCommand cmd9 = new SqlCommand(a,con);
-            //SqlCommand cmd9 = new SqlCommand(@"UPDATE [BillReceive] SET [VrNo]='" + txtB_Vr.Text + "',[Jrn_Type]='" + lblB_Sale.Text + "',[CompanyName]='" + DropDownList1.Text + "',[Description]='" + txtB_Description.Text + "',[BillAmount]='" + txtB_Amount.Text + "',[ReceiveAmount]= '" + 0 + "',[Date] = '" + txtB_Date.Text + "' WHERE [VrNo]='" + txtB_Vr.Text + "'", con);
+            con.Open();
+            SqlCommand cmd9 = new SqlCommand(@"UPDATE [BillReceive] SET [VrNo]='" + txtB_Vr.Text + "',[Jrn_Type]='" + lblB_Sale.Text + "',[CompanyName]='" + DropDownList1.Text + "',[Description]='" + txtB_Description.Text + "',[BillAmount]='" + txtB_Amount.Text + "',[ReceiveAmount]= '" + 0 + "',[Date] = '" + txtB_Date.Text + "' WHERE [VrNo]='" + txtB_Vr.Text + "'", con);
             cmd9.ExecuteNonQuery();
             con.Close();
 
@@ -107,14 +110,5 @@ public partial class CustomerBill : System.Web.UI.Page
 
             Response.Redirect("BillTable.aspx");
         }
-    }
-
-    protected void Button1_Click(object sender, EventArgs e)
-    {
-
-        var a = "UPDATE       BillReceive" +
-        "  SET                VrNo = '" + txtB_Vr.Text + "', Jrn_Type = '" + lblB_Sale.Text + "', CompanyName ='" + DropDownList1.Text + "' , Description = '" + txtB_Description.Text + "', ReceiveAmount = '" + 0 + "', BillAmount = '" + txtB_Amount.Text + "', Date = '" + txtB_Date.Text + "'"
-          + "  WHERE        (VrNo = '" + txtB_Vr.Text + "')";
-
     }
 }

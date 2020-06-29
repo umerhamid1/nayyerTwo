@@ -25,7 +25,7 @@
 											<label class="col-sm-4 control-label text-sm-right pt-2">Id</label>
 											<div class="col-sm-8">
 											    <asp:Label ID="lblCompanyId" runat="server" Text="" Width="275px" class="form-control"></asp:Label>
-                                                <div style="color: #009933">Automatically Generated.</div>
+                                                <div style="color: #009933">Fixed Value.</div>
 											</div>
 										</div>
                                         

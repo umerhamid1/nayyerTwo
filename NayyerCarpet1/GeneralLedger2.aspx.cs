@@ -7,12 +7,13 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Configuration;
 
 public partial class BillTable : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+      
     }
 
     protected void btnViewReport_Click(object sender, EventArgs e)
@@ -58,5 +59,28 @@ public partial class BillTable : System.Web.UI.Page
 
         }
         return dt;
+    }
+
+    protected void btnB_Print_Click(object sender, EventArgs e)
+    {
+        Warning[] warnings;
+        string[] streamIds;
+        string contentType;
+        string encoding;
+        string extension;
+
+        //Export the RDLC Report to Byte Array.
+        byte[] bytes = ReportViewer1.LocalReport.Render(ddlFileFormat.SelectedItem.Value, null, out contentType, out encoding, out extension, out streamIds, out warnings);
+
+        //Download the RDLC Report in Word, Excel, PDF and Image formats.
+        Response.Clear();
+        Response.Buffer = true;
+        Response.Charset = "";
+        Response.Cache.SetCacheability(HttpCacheability.NoCache);
+        Response.ContentType = contentType;
+        Response.AppendHeader("Content-Disposition", "attachment; filename=RDLC." + extension);
+        Response.BinaryWrite(bytes);
+        Response.Flush();
+        Response.End();
     }
 }

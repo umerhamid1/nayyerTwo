@@ -18,6 +18,11 @@ public partial class CustomerBill : System.Web.UI.Page
         {
             GenerateAutoId();
         }
+
+        //if (Session["Email"] == null)
+        //{
+        //    Response.Redirect("Login.aspx");
+        //}
     }
 
     private void GenerateAutoId()

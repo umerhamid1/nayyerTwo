@@ -890,7 +890,7 @@
         </TablixRowHierarchy>
         <NoRowsMessage>No Records Found !!</NoRowsMessage>
         <DataSetName>DataSet1</DataSetName>
-        <Top>1.28in</Top>
+        <Top>2.03in</Top>
         <Left>0.27079in</Left>
         <Height>1.22917in</Height>
         <Width>8.83212in</Width>
@@ -924,7 +924,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>0.155in</Top>
+        <Top>0.905in</Top>
         <Left>0.26126in</Left>
         <Height>0.4375in</Height>
         <Width>1.17708in</Width>
@@ -958,7 +958,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox21</rd:DefaultName>
-        <Top>0.79687in</Top>
+        <Top>1.54687in</Top>
         <Left>0.27079in</Left>
         <Height>0.29167in</Height>
         <Width>0.61458in</Width>
@@ -992,7 +992,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox22</rd:DefaultName>
-        <Top>0.79687in</Top>
+        <Top>1.54687in</Top>
         <Left>0.95482in</Left>
         <Height>0.29167in</Height>
         <Width>1.21269in</Width>
@@ -1026,7 +1026,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox22</rd:DefaultName>
-        <Top>0.79687in</Top>
+        <Top>1.54687in</Top>
         <Left>2.60848in</Left>
         <Height>0.29167in</Height>
         <Width>1.21269in</Width>
@@ -1061,7 +1061,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox21</rd:DefaultName>
-        <Top>0.79687in</Top>
+        <Top>1.54687in</Top>
         <Left>2.23in</Left>
         <Height>0.29167in</Height>
         <Width>0.32292in</Width>
@@ -1077,16 +1077,54 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
+      <Textbox Name="Textbox3">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Nayyer Carpet Karachi</Value>
+                <Style>
+                  <FontSize>20pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <Color>#0066ff</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>0.30729in</Top>
+        <Left>3.13626in</Left>
+        <Height>0.4375in</Height>
+        <Width>3.15041in</Width>
+        <ZIndex>6</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
-    <Height>2.80208in</Height>
+    <Height>3.42708in</Height>
     <Style />
   </Body>
   <Width>9.37375in</Width>
   <Page>
-    <LeftMargin>1in</LeftMargin>
-    <RightMargin>1in</RightMargin>
-    <TopMargin>1in</TopMargin>
-    <BottomMargin>1in</BottomMargin>
+    <PageHeight>8in</PageHeight>
+    <PageWidth>10.5in</PageWidth>
+    <LeftMargin>0.5in</LeftMargin>
+    <RightMargin>0.5in</RightMargin>
+    <TopMargin>0.5in</TopMargin>
+    <BottomMargin>0.5in</BottomMargin>
     <Style />
   </Page>
   <AutoRefresh>0</AutoRefresh>

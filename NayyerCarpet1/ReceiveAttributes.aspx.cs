@@ -26,6 +26,11 @@ public partial class CustomerBill : System.Web.UI.Page
                 DropDownList1.Items.Add(r["CompanyName"].ToString());
             }
         }
+
+        //if (Session["Email"] == null)
+        //{
+        //    Response.Redirect("Login.aspx");
+        //}
     }
 
     protected void btnR_Submit_Click(object sender, EventArgs e)
