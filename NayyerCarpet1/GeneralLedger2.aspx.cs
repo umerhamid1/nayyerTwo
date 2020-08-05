@@ -13,7 +13,10 @@ public partial class BillTable : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-      
+        if (Session["Email"] == null)
+        {
+            Response.Redirect("Login.aspx");
+        }
     }
 
     protected void btnViewReport_Click(object sender, EventArgs e)

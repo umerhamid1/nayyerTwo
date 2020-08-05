@@ -659,7 +659,6 @@
                               <Style>
                                 <FontSize>14pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
-                                <Color>#0066ff</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -696,7 +695,6 @@
                               <Style>
                                 <FontSize>14pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
-                                <Color>#0066ff</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -733,7 +731,6 @@
                               <Style>
                                 <FontSize>14pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
-                                <Color>#0066ff</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -770,7 +767,6 @@
                               <Style>
                                 <FontSize>14pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
-                                <Color>#0066ff</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -890,8 +886,8 @@
         </TablixRowHierarchy>
         <NoRowsMessage>No Records Found !!</NoRowsMessage>
         <DataSetName>DataSet1</DataSetName>
-        <Top>2.03in</Top>
-        <Left>0.27079in</Left>
+        <Top>2.28in</Top>
+        <Left>0.3421in</Left>
         <Height>1.22917in</Height>
         <Width>8.83212in</Width>
         <Style>
@@ -905,29 +901,29 @@
           <Color>#0066ff</Color>
         </Style>
       </Tablix>
-      <Textbox Name="Textbox2">
+      <Textbox Name="Textbox19">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Report</Value>
+                <Value>InVoice</Value>
                 <Style>
-                  <FontSize>20pt</FontSize>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>55pt</FontSize>
                   <FontWeight>Bold</FontWeight>
-                  <Color>#0066ff</Color>
                 </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>0.905in</Top>
-        <Left>0.26126in</Left>
-        <Height>0.4375in</Height>
-        <Width>1.17708in</Width>
+        <rd:DefaultName>Textbox19</rd:DefaultName>
+        <Top>0.8781in</Top>
+        <Left>0.8421in</Left>
+        <Height>0.92709in</Height>
+        <Width>2.75in</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -939,145 +935,7 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="Textbox21">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>From </Value>
-                <Style>
-                  <FontSize>14pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                  <Color>#0066ff</Color>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox21</rd:DefaultName>
-        <Top>1.54687in</Top>
-        <Left>0.27079in</Left>
-        <Height>0.29167in</Height>
-        <Width>0.61458in</Width>
-        <ZIndex>2</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <VerticalAlign>Middle</VerticalAlign>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox22">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=Parameters!FromDate.Value</Value>
-                <Style>
-                  <FontSize>14pt</FontSize>
-                  <Color>#0066ff</Color>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox22</rd:DefaultName>
-        <Top>1.54687in</Top>
-        <Left>0.95482in</Left>
-        <Height>0.29167in</Height>
-        <Width>1.21269in</Width>
-        <ZIndex>3</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <VerticalAlign>Middle</VerticalAlign>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox23">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=Parameters!ToDate.Value</Value>
-                <Style>
-                  <FontSize>14pt</FontSize>
-                  <Color>#0066ff</Color>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox22</rd:DefaultName>
-        <Top>1.54687in</Top>
-        <Left>2.60848in</Left>
-        <Height>0.29167in</Height>
-        <Width>1.21269in</Width>
-        <ZIndex>4</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <VerticalAlign>Middle</VerticalAlign>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox25">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>To</Value>
-                <Style>
-                  <FontSize>14pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                  <Color>#0066ff</Color>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox21</rd:DefaultName>
-        <Top>1.54687in</Top>
-        <Left>2.23in</Left>
-        <Height>0.29167in</Height>
-        <Width>0.32292in</Width>
-        <ZIndex>5</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <VerticalAlign>Middle</VerticalAlign>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox3">
+      <Textbox Name="Textbox20">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
@@ -1086,22 +944,152 @@
               <TextRun>
                 <Value>Nayyer Carpet Karachi</Value>
                 <Style>
-                  <FontSize>20pt</FontSize>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>28pt</FontSize>
                   <FontWeight>Bold</FontWeight>
-                  <Color>#0066ff</Color>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style>
-              <TextAlign>Left</TextAlign>
-            </Style>
+            <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>0.30729in</Top>
-        <Left>3.13626in</Left>
-        <Height>0.4375in</Height>
-        <Width>3.15041in</Width>
+        <rd:DefaultName>Textbox20</rd:DefaultName>
+        <Top>0.2908in</Top>
+        <Left>3.93395in</Left>
+        <Height>0.59424in</Height>
+        <Width>4.0625in</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox27">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>From</Value>
+                <Style>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>16pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox26</rd:DefaultName>
+        <Top>1.79253in</Top>
+        <Left>4.2063in</Left>
+        <Height>0.36458in</Height>
+        <Width>0.65625in</Width>
+        <ZIndex>3</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox28">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>To</Value>
+                <Style>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>16pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox26</rd:DefaultName>
+        <Top>1.79253in</Top>
+        <Left>6.88771in</Left>
+        <Height>0.36458in</Height>
+        <Width>0.40625in</Width>
+        <ZIndex>4</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox29">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!FromDate.Value</Value>
+                <Style>
+                  <FontSize>16pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox29</rd:DefaultName>
+        <Top>1.79253in</Top>
+        <Left>5.03092in</Left>
+        <Height>0.36458in</Height>
+        <Width>1.69792in</Width>
+        <ZIndex>5</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox42">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!ToDate.Value</Value>
+                <Style>
+                  <FontSize>16pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox33</rd:DefaultName>
+        <Top>1.79253in</Top>
+        <Left>7.44759in</Left>
+        <Height>0.36458in</Height>
+        <Width>1.69792in</Width>
         <ZIndex>6</ZIndex>
         <Style>
           <Border>
@@ -1114,10 +1102,10 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>3.42708in</Height>
+    <Height>3.80084in</Height>
     <Style />
   </Body>
-  <Width>9.37375in</Width>
+  <Width>9.49555in</Width>
   <Page>
     <PageHeight>8in</PageHeight>
     <PageWidth>10.5in</PageWidth>

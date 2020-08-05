@@ -9,7 +9,19 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="head" Runat="Server">
 
-     <link href="bootstrap-4.4.1/css/bootstrap.css" rel="stylesheet" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css"/>
+		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css" />
+		<link rel="stylesheet" href="vendor/animate/animate.css"/>
+		<link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.css" />
+		<link rel="stylesheet" href="vendor/magnific-popup/magnific-popup.css" />
+		<link rel="stylesheet" href="vendor/bootstrap-datepicker/css/bootstrap-datepicker3.css" />
+		<link rel="stylesheet" href="vendor/select2/css/select2.css" />
+		<link rel="stylesheet" href="vendor/select2-bootstrap-theme/select2-bootstrap.min.css" />
+		<link rel="stylesheet" href="css/theme.css" />
+		<link rel="stylesheet" href="css/skins/default.css" />
+		<link rel="stylesheet" href="css/custom.css"/>
+		<script src="vendor/modernizr/modernizr.js"></script>
 
 </asp:Content>
 
@@ -26,37 +38,37 @@
                                     <div class="card-body">
 
                                         <div class="form-group row">
-											<label class="col-sm-4 control-label text-sm-right pt-2">Company Name <span class="required">*</span></label>
+											<label class="col-sm-4 control-label text-sm-right pt-2" style="font-size:15px;">Company Name <span class="required">*</span></label>
 											<div class="col-sm-8">
                                                 <asp:DropDownList ID="DropDownList1" runat="server" data-plugin-selectTwo class="form-control populate" Width="275px"></asp:DropDownList>
 											</div>
 										</div>
 
                                         <div class="form-group row">
-                                            <label class="col-sm-4 control-label text-sm-right pt-2">From Date <span class="required">*</span></label>
+                                            <label class="col-sm-4 control-label text-sm-right pt-2" style="font-size:15px;">From Date <span class="required">*</span></label>
 											<div class="col-sm-8">
-                                                <asp:TextBox ID="txtFrom" runat="server" data-plugin-datepicker TextMode="Date" placeholder="eg.: mm/dd/yyyy" Width="275px" class="form-control"></asp:TextBox>
+                                                <asp:TextBox ID="txtFrom" runat="server" data-plugin-datepicker placeholder="  mm/dd/yyyy" Width="275px" class="form-control"></asp:TextBox>
 											    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="This field is required." ControlToValidate="txtFrom" ForeColor="Red"></asp:RequiredFieldValidator>
 										    </div>
 										</div>
 
                                         <div class="form-group row">
-                                            <label class="col-sm-4 control-label text-sm-right pt-2">To Date <span class="required">*</span></label>
+                                            <label class="col-sm-4 control-label text-sm-right pt-2" style="font-size:15px;">To Date <span class="required">*</span></label>
 											<div class="col-sm-8">
-                                                <asp:TextBox ID="txtTo" runat="server" data-plugin-datepicker TextMode="Date" placeholder="eg.: mm/dd/yyyy" Width="275px" class="form-control"></asp:TextBox>
+                                                <asp:TextBox ID="txtTo" runat="server" data-plugin-datepicker placeholder="  mm/dd/yyyy" Width="275px" class="form-control"></asp:TextBox>
 											    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="This field is required." ControlToValidate="txtTo" ForeColor="Red"></asp:RequiredFieldValidator>
 										    </div>
 										</div>
 
                                          <div class="form-group row">
-											<label class="col-sm-4 control-label text-sm-right pt-2">Download Report</label>
+											<label class="col-sm-4 control-label text-sm-right pt-2" style="font-size:15px;">Download Report</label>
 											<div class="col-sm-8">
                                                 <asp:DropDownList ID="ddlFileFormat" runat="server"  class="form-control populate" Width="275px">
-                                                    <asp:ListItem Text="Select Download File In "></asp:ListItem>
+                                                    <asp:ListItem Text="  Select Download File In "></asp:ListItem>
                                                     <asp:ListItem Text="PDF" Value="PDF"></asp:ListItem>  
                                                     <asp:ListItem Text="WORD" Value="WORD"></asp:ListItem>  
                                                     <asp:ListItem Text="EXCEL" Value="EXCEL"></asp:ListItem> 
-                                                    <asp:ListItem Text="Image" Value="IMAGE"></asp:ListItem> 
+                                                    <asp:ListItem Text="IMAGE" Value="IMAGE"></asp:ListItem> 
                                                 </asp:DropDownList>
 											</div>
 										</div>
@@ -88,5 +100,33 @@
         </rsweb:ReportViewer>
     </center>
     <br />
+
+    <!-- Vendor -->
+		<script src="vendor/jquery/jquery.js"></script>
+		<script src="vendor/jquery-browser-mobile/jquery.browser.mobile.js"></script>
+		<script src="vendor/popper/umd/popper.min.js"></script>
+		<script src="vendor/bootstrap/js/bootstrap.js"></script>
+		<script src="vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+		<script src="vendor/common/common.js"></script>
+		<script src="vendor/nanoscroller/nanoscroller.js"></script>
+		<script src="vendor/magnific-popup/jquery.magnific-popup.js"></script>
+		<script src="vendor/jquery-placeholder/jquery-placeholder.js"></script>
+		
+		<!-- Specific Page Vendor -->
+		<script src="vendor/jquery-validation/jquery.validate.js"></script>
+		<script src="vendor/select2/js/select2.js"></script>
+		
+		<!-- Theme Base, Components and Settings -->
+		<script src="js/theme.js"></script>
+		
+		<!-- Theme Custom -->
+		<script src="js/custom.js"></script>
+		
+		<!-- Theme Initialization Files -->
+		<script src="js/theme.init.js"></script>
+
+		<!-- Examples -->
+		<script src="js/examples/examples.validation.js"></script>
+
 </asp:Content>
 

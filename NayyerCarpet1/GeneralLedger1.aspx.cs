@@ -28,6 +28,11 @@ public partial class BillTable : System.Web.UI.Page
                 DropDownList1.Items.Add(r["CompanyName"].ToString());
             }
         }
+
+        if (Session["Email"] == null)
+        {
+            Response.Redirect("Login.aspx");
+        }
     }
 
     protected void btnViewReport_Click(object sender, EventArgs e)

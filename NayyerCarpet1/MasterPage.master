@@ -15,6 +15,9 @@
 <body>
     <form id="form1" runat="server">
         <nav>
+            <div>
+                <asp:Label ID="Label1" runat="server" width="98%" style="text-align: right;" ForeColor="White"></asp:Label>
+            </div>
             <div class="logo">NayyeR CarpeT</div>
             <ul>
                 <li><a href="CompanyTable.aspx">Company Table</a></li>

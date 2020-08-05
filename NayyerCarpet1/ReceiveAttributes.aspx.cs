@@ -27,10 +27,10 @@ public partial class CustomerBill : System.Web.UI.Page
             }
         }
 
-        //if (Session["Email"] == null)
-        //{
-        //    Response.Redirect("Login.aspx");
-        //}
+        if (Session["Email"] == null)
+        {
+            Response.Redirect("Login.aspx");
+        }
     }
 
     protected void btnR_Submit_Click(object sender, EventArgs e)

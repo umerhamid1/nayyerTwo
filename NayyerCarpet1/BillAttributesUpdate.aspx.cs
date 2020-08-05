@@ -18,10 +18,10 @@ public partial class CustomerBill : System.Web.UI.Page
     int bilAmt = 0;
     String Date = "";
     String TableName = "Customer Bill List";
+    String email = "";
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Page.IsPostBack == false)
         {
             string sql = "Select CompanyName From AddNewCompany";
             SqlDataAdapter da = new SqlDataAdapter(sql, con);
@@ -49,64 +49,58 @@ public partial class CustomerBill : System.Web.UI.Page
 
             if (ds.Tables[0].Rows.Count > 0)
             {
-                txtB_Vr.Text = ds.Tables[0].Rows[0]["VrNo"].ToString();
                 VrNo = int.Parse(ds.Tables[0].Rows[0]["VrNo"].ToString());
-
-                lblB_Sale.Text = ds.Tables[0].Rows[0]["Jrn_Type"].ToString();
                 Jrn_Type = ds.Tables[0].Rows[0]["Jrn_Type"].ToString();
-
-                DropDownList1.Text = ds.Tables[0].Rows[0]["CompanyName"].ToString();
                 CompanyName = ds.Tables[0].Rows[0]["CompanyName"].ToString();
-
-                txtB_Description.Text = ds.Tables[0].Rows[0]["Description"].ToString();
                 Description = ds.Tables[0].Rows[0]["Description"].ToString();
-
-                txtB_Amount.Text = ds.Tables[0].Rows[0]["BillAmount"].ToString();
                 bilAmt = int.Parse(ds.Tables[0].Rows[0]["BillAmount"].ToString());
-
-                txtB_Date.Text = Convert.ToDateTime(ds.Tables[0].Rows[0]["Date"]).ToString("MM/dd/yyyy");
                 Date = Convert.ToDateTime(ds.Tables[0].Rows[0]["Date"]).ToString("MM/dd/yyyy");
+               
+                if (Page.IsPostBack == false)
+                {
+                    txtB_Vr.Text = ds.Tables[0].Rows[0]["VrNo"].ToString();
+                    lblB_Sale.Text = ds.Tables[0].Rows[0]["Jrn_Type"].ToString();
+                    DropDownList1.Text = ds.Tables[0].Rows[0]["CompanyName"].ToString();
+                    txtB_Description.Text = ds.Tables[0].Rows[0]["Description"].ToString();
+                    txtB_Amount.Text = ds.Tables[0].Rows[0]["BillAmount"].ToString();
+                    txtB_Date.Text = Convert.ToDateTime(ds.Tables[0].Rows[0]["Date"]).ToString("MM/dd/yyyy");
+                }
+                con.Close();
             }
-            con.Close();
         }
 
-        //if (Session["Email"] == null)
+        //var email = Session["Email"];
+        if (Session["Email"] == null)
+        {
+            Response.Redirect("Login.aspx");
+        }
+        //else
         //{
-        //    Response.Redirect("Login.aspx");
+        //  Label3.Text = "Welcome To " + Session["username"].ToString();
         //}
-    }
+    }   
+    
 
     protected void btnB_Update_Click(object sender, EventArgs e)
     {
         if (Page.IsValid)
         {
             con.Open();
-            SqlCommand cmd1 = new SqlCommand("Insert into OldDataBillReceive values('" + TableName + "','" + 0 + "','" + VrNo + "','" + Jrn_Type + "','" + CompanyName + "','" + Description + "','" + bilAmt + "','" + 0 + "','" + Date + "','" + 0 + "','" + 0 + "','" + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + "')", con);
+            SqlCommand cmd1 = new SqlCommand("Insert into OldDataBillReceive values('" + TableName + "','" + 0 + "','" + VrNo + "','" + Jrn_Type + "','" + CompanyName + "','" + Description + "','" + bilAmt + "','" + 0 + "','" + Date + "','" + 0 + "','" + email + "','" + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + "')", con);
             cmd1.ExecuteNonQuery();
             con.Close();
 
-            var a = "UPDATE       BillReceive"+
-          "  SET                VrNo = '" + txtB_Vr.Text + "', Jrn_Type = '" + lblB_Sale.Text + "', CompanyName ='" + DropDownList1.Text + "' , Description = '" + txtB_Description.Text + "', ReceiveAmount = '" + 0 + "', BillAmount = '" + txtB_Amount.Text + "', Date = '" + txtB_Date.Text + "'"
-            +  "  WHERE        (VrNo = '" + txtB_Vr.Text + "')";
-
             con.Open();
-            SqlCommand cmd9 = new SqlCommand(@"UPDATE [BillReceive] SET [VrNo]='" + txtB_Vr.Text + "',[Jrn_Type]='" + lblB_Sale.Text + "',[CompanyName]='" + DropDownList1.Text + "',[Description]='" + txtB_Description.Text + "',[BillAmount]='" + txtB_Amount.Text + "',[ReceiveAmount]= '" + 0 + "',[Date] = '" + txtB_Date.Text + "' WHERE [VrNo]='" + txtB_Vr.Text + "'", con);
-            cmd9.ExecuteNonQuery();
-            con.Close();
+            SqlCommand cmd = new SqlCommand("update BillReceive set CompanyName = @CompanyNames,Description=@Description,BillAmount=@BillAmount,Date=@Date where VrNo=@VrNo", con);
+            cmd.Parameters.AddWithValue("@VrNo", txtB_Vr.Text);
+            cmd.Parameters.AddWithValue("@Jrn_Type", lblB_Sale.Text);
+            cmd.Parameters.AddWithValue("@CompanyNames", DropDownList1.Text);
+            cmd.Parameters.AddWithValue("@Description", txtB_Description.Text);
+            cmd.Parameters.AddWithValue("@BillAmount", txtB_Amount.Text);
+            cmd.Parameters.AddWithValue("@Date", txtB_Date.Text);
 
-            //con.Open();
-            //SqlCommand cmd = new SqlCommand("update BillReceive Set CompanyName=@CompanyName,Description=@Description,BillAmount=@BillAmount,Date=@Date where VrNo=@VrNo", con);
-            //cmd.Parameters.AddWithValue("@VrNo", txtB_Vr.Text);
-            //cmd.Parameters.AddWithValue("@Jrn_Type", lblB_Sale.Text);
-            //cmd.Parameters.AddWithValue("@CompanyName", DropDownList1.Text);
-            //cmd.Parameters.AddWithValue("@Description", txtB_Description.Text);
-            //cmd.Parameters.AddWithValue("@BillAmount", txtB_Amount.Text);
-            //cmd.Parameters.AddWithValue("@Date", txtB_Date.Text);  
-
-            
-            //cmd.CommandText = "Update BillReceive set  VrNo = '" + txtB_Vr.Text + "' , Jrn_Type = '" + lblB_Sale.Text + "' , CompanyName = '" + DropDownList1.Text + "' , Description = '" + txtB_Description.Text + "' , BillAmount = '" + txtB_Amount.Text + "', ReceiveAmount = '" + 0 + "' , Date = '" + txtB_Date.Text + "'  where VrNo = '" + txtB_Vr.Text + "'";
-            //cmd.Connection = con;
-            //cmd.ExecuteNonQuery();
+            cmd.Connection = con;
+            cmd.ExecuteNonQuery();
 
             Response.Redirect("BillTable.aspx");
         }

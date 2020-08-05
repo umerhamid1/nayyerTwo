@@ -28,10 +28,10 @@ public partial class BillTable : System.Web.UI.Page
             }
         }
 
-        //if (Session["Email"] == null)
-        //{
-        //    Response.Redirect("Login.aspx");
-        //}
+        if (Session["Email"] == null)
+        {
+            Response.Redirect("Login.aspx");
+        }
     }
 
     protected void btnB_Search_Click(object sender, EventArgs e)

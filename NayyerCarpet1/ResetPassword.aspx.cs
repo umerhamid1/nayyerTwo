@@ -65,7 +65,7 @@ public partial class ForgotPassword : System.Web.UI.Page
             StringBuilder sb = new StringBuilder();
             sb.Append("Dear Friend,<br/> Click on below given link to Reset Your Password<br/> <br>");
             //sb.Append("<a href=http://localhost:57355/codesoluation/resetlink.aspx?username=" + GetUserEmail(txtemail.Text));
-            sb.Append("<a href=http://localhost:2095/RecoverPassword.aspx?username=" + GetUserEmail(txtemail.Text));
+            sb.Append("<a href=http://localhost:6937/RecoverPassword.aspx?username=" + GetUserEmail(txtemail.Text));
 
             sb.Append("&Email=" + txtemail.Text + ">Click Here to Change Your Password</a><br/>");
             sb.Append("<br><br>Thanks & Regards<br>NAYYER CARPETS Team");
