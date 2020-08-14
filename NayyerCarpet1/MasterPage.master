@@ -30,7 +30,7 @@
                         <li><a href="GeneralLedger2.aspx">General Ledger 2</a></li>
                     </ul>
                 </li>
-                <li><asp:LinkButton CssClass="linkbuttonCss" ID="btn_LogOut" runat="server" OnClick="btn_LogOut_Click">Logout</asp:LinkButton></li>
+                <li><asp:LinkButton CssClass="linkbuttonCss" ID="btn_LogOut" runat="server" OnClick="btn_LogOut_Click" CausesValidation="false">Logout</asp:LinkButton></li>
             </ul>
         </nav>
 

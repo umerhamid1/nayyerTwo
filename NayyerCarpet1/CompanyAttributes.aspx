@@ -38,8 +38,8 @@
 										<div class="form-group row">
 											<label class="col-sm-4 control-label text-sm-right pt-2" style="font-size:15px;">Id</label>
 											<div class="col-sm-8">
-											    <asp:Label ID="lblCompanyId" runat="server" Text="" Width="275px" class="form-control"></asp:Label>
-                                                <div style="color: #009933">Fixed Value.</div>
+                                                <asp:Label ID="lblCompanyId" runat="server" style="font-size:15px; font-weight: 700;" ></asp:Label>
+                                                <div style="color: #009933">Automatically Generated.</div>
 											</div>
 										</div>
                                         

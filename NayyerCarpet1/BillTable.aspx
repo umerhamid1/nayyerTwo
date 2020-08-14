@@ -37,16 +37,16 @@
 											    <label class="col-sm-4 control-label text-sm-right pt-2" style="font-size:15px;">Company Name <span class="required">*</span></label>
 											    <div class="col-sm-8">
                                                     <asp:DropDownList ID="DropDownList1" runat="server" data-plugin-selectTwo class="form-control populate" Width="275px"></asp:DropDownList>
-											    </div>
+											        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="DropDownList1" ErrorMessage="This field is required." InitialValue="Choose a Name" ForeColor="Red"></asp:RequiredFieldValidator>
+                                                </div>
 										    </div>
 									    </div>
 									    <footer class="card-footer">
 										    <div>
 											    <div class="col-sm-15">
 												    <asp:Button ID="btnB_Search" runat="server" class="btn btn-primary" Text="Search" OnClick="btnB_Search_Click"/>
-                                                    <%--<button type="reset" class="btn btn-danger" >Reset</button>--%>
-                                                    <asp:Button ID="btnB_GetAllRecord" runat="server" class="btn btn-primary" Text="Get All Records" OnClick="btnB_GetAllRecord_Click"/>
-                                                    <asp:Button ID="btnB_AddNewCustomer" runat="server" class="btn btn-success" Text="Add New Bill" OnClick="btnB_AddNewCustomer_Click"/>
+                                                    <asp:Button ID="btnB_GetAllRecord" runat="server" class="btn btn-primary" Text="Get All Records" OnClick="btnB_GetAllRecord_Click" CausesValidation="false"/>
+                                                    <asp:Button ID="btnB_AddNewCustomer" runat="server" class="btn btn-success" Text="Add New Bill" OnClick="btnB_AddNewCustomer_Click" CausesValidation="false"/>
 												
 											    </div>
 										    </div>
