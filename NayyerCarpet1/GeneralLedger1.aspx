@@ -38,7 +38,7 @@
                                     <div class="card-body">
 
                                         <div class="form-group row">
-											<label class="col-sm-4 control-label text-sm-right pt-2" style="font-size:15px;">Company Name <span class="required">*</span></label>
+											<label class="col-sm-4 control-label text-sm-right pt-2" style="font-size:15px;">Party Name <span class="required">*</span></label>
 											<div class="col-sm-8">
                                                 <asp:DropDownList ID="DropDownList1" runat="server" data-plugin-selectTwo class="form-control populate" Width="275px"></asp:DropDownList>
 											    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="DropDownList1" ErrorMessage="This field is required." InitialValue="Choose a Name" ForeColor="Red"></asp:RequiredFieldValidator>

@@ -28,7 +28,7 @@
                             <div style="margin-left:400px;">
 								<section class="card">
 									<header class="card-header">
-										<h5 class="card-title" >Update Customer Receive Bill In Account</h5>
+										<h5 class="card-title" >Update Party Receive Bill In Account</h5>
 									</header>
 									
                                     <div class="card-body">
@@ -36,13 +36,13 @@
                                         <div class="form-group row">
 											<label class="col-sm-4 control-label text-sm-right pt-2" style="font-size:15px;">Jrn Type</label>
 											<div class="col-sm-8">
-											    <asp:Label ID="lblR_Receive" runat="server" Text="Receive" style="font-size:15px; font-weight: 700;"  ></asp:Label>
+											    <asp:Label ID="lblR_Receive" runat="server" Text="Received" style="font-size:15px; font-weight: 700;"  ></asp:Label>
                                                 <div style="color: #009933">Fixed Value.</div>
 											</div>
 										</div>
 
                                         <div class="form-group row">
-											<label class="col-sm-4 control-label text-sm-right pt-2" style="font-size:15px;">Company Name <span class="required">*</span></label>
+											<label class="col-sm-4 control-label text-sm-right pt-2" style="font-size:15px;">Party Name <span class="required">*</span></label>
 											<div class="col-sm-8">
                                                 <asp:DropDownList ID="DropDownList1" runat="server" data-plugin-selectTwo class="form-control populate" Width="275px"></asp:DropDownList>
 											    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="DropDownList1" ErrorMessage="This field is required." InitialValue="Choose a Name" ForeColor="Red"></asp:RequiredFieldValidator>

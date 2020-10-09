@@ -17,7 +17,9 @@ public partial class Login : System.Web.UI.Page
     {
         string Email = Session["Email"].ToString();
 
-        SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=OrderManagementSystem;Integrated Security=True");
+        SqlConnection con = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["OrderManagementSystemConnectionString"].ConnectionString
+            //"Data Source=.;Initial Catalog=OrderManagementSystem;Integrated Security=True"
+            );
         SqlCommand cmd = new SqlCommand("Update Login set password = '" + txtnewpwd.Text + "'where Email= '" + Email + "'", con);
         con.Open();
         cmd.ExecuteNonQuery();

@@ -19,7 +19,8 @@ public partial class ForgotPassword : System.Web.UI.Page
     protected void btnGetPassword_Click(object sender, EventArgs e)
     {
         String password;
-        String mycon = "Data Source=.;Initial Catalog=OrderManagementSystem;Integrated Security=True";
+        String mycon = System.Configuration.ConfigurationManager.ConnectionStrings["OrderManagementSystemConnectionString"].ConnectionString;
+            //"Data Source=.;Initial Catalog=OrderManagementSystem;Integrated Security=True";
         String myquery = "Select * from Login where email='" + txtemail.Text + "'";
         SqlConnection con = new SqlConnection(mycon);
         SqlCommand cmd = new SqlCommand();

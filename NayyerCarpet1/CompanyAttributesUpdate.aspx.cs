@@ -9,7 +9,9 @@ using System.Data.SqlClient;
 
 public partial class CustomerBill : System.Web.UI.Page
 {
-    SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=OrderManagementSystem;Integrated Security=True");
+    SqlConnection con = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["OrderManagementSystemConnectionString"].ConnectionString
+        //"Data Source=.;Initial Catalog=OrderManagementSystem;Integrated Security=True"
+        );
 
     int Id = 0;
     String CompanyName = "";
@@ -19,7 +21,8 @@ public partial class CustomerBill : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         {
-            String mycon = "Data Source=.;Initial Catalog=OrderManagementSystem;Integrated Security=True";
+            String mycon = System.Configuration.ConfigurationManager.ConnectionStrings["OrderManagementSystemConnectionString"].ConnectionString;
+            //"Data Source=.;Initial Catalog=OrderManagementSystem;Integrated Security=True";
             String myquery = "Select Id,CompanyName,Contact from AddNewCompany where Id=" + Request.QueryString["Id"];
             SqlConnection con = new SqlConnection(mycon);
             SqlCommand cmd = new SqlCommand();

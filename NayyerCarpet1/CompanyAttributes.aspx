@@ -30,7 +30,7 @@
                             <div style="margin-left:420px;">
 								<section class="card">
 									<header class="card-header">
-										<h5 class="card-title" >Add New Company In Account</h5>
+										<h5 class="card-title" >Add New Party In Account</h5>
 									</header>
 									
                                     <div class="card-body">
@@ -44,7 +44,7 @@
 										</div>
                                         
                                         <div class="form-group row">
-											<label class="col-sm-4 control-label text-sm-right pt-2" style="font-size:15px;">Company Name <span class="required">*</span></label>
+											<label class="col-sm-4 control-label text-sm-right pt-2" style="font-size:15px;">Party Name <span class="required">*</span></label>
 											<div class="col-sm-8">
 											    <asp:TextBox ID="txtCompany_Name" runat="server" class="form-control" placeholder="  Nayyer Carpet Karachi" Width="275px"></asp:TextBox>
 											    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="This field is required." ControlToValidate="txtCompany_Name" ForeColor="Red"></asp:RequiredFieldValidator>

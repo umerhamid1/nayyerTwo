@@ -7,28 +7,7 @@
 }
 
 body{
-    font-family:'Comic Sans MS';
-    /*background: #f2f2f2;*/
-    /*background-image: url('../Images/1 (1).jpg');    
-    background-size:cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    margin:auto;*/
-
-    background: url('../Images/1 (1).jpg');
-    background-size:cover;
-    height: 805px;
-    /*background: url('../Images/1 (1).jpg') no-repeat center fixed;    
-    background-size:cover;
-    height: 805px;*/
-
-    /*background-image: url('../Images/1 (1).jpg');
-    background-color: #cccccc;
-    height: auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;*/
+    /*background-color:ThreeDHighlight;*/
 }
 
 nav{

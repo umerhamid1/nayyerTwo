@@ -6,17 +6,30 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
+using System.Configuration;
+
+
 
 
 public partial class Login : System.Web.UI.Page
 {
+
+
+    public static string cs = System.Configuration.ConfigurationManager.ConnectionStrings["OrderManagementSystemConnectionString"].ConnectionString; //ConfigurationManager.ConnectionStrings["connectionStringName"].ConnectionString;
+
     protected void Page_Load(object sender, EventArgs e)
     {
+
         lblmsgerror.Visible = false;
     }
+
+
+
     protected void btnLogin_Click(object sender, EventArgs e)
     {
-        using (SqlConnection sqlcon = new SqlConnection(@"Data Source=.;Initial Catalog=OrderManagementSystem;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework;"))
+        using (SqlConnection sqlcon = new SqlConnection(cs
+//@"Data Source=.;Initial Catalog=OrderManagementSystem;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework;"
+))
         {
             sqlcon.Open();
             string query = "SELECT COUNT(1) FROM Login WHERE Email=@Email AND Password=@Password";

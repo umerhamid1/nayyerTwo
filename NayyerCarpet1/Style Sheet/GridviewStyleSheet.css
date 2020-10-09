@@ -1,0 +1,10 @@
+﻿.cssgridview td {
+    padding: 1px 10px;
+}
+
+.cssgridview th {
+    padding:4px 2px;
+    text-align:center;
+}
+
+

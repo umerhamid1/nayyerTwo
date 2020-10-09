@@ -9,7 +9,9 @@ using System.Data.SqlClient;
 
 public partial class CustomerBill : System.Web.UI.Page
 {
-    SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=OrderManagementSystem;Integrated Security=True");
+    SqlConnection con = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["OrderManagementSystemConnectionString"].ConnectionString
+        //"Data Source=.;Initial Catalog=OrderManagementSystem;Integrated Security=True"
+    );
 
     int VrNo = 0;
     String Jrn_Type = "";
@@ -36,7 +38,8 @@ public partial class CustomerBill : System.Web.UI.Page
         }
 
         {
-            String mycon = "Data Source=.;Initial Catalog=OrderManagementSystem;Integrated Security=True";
+            String mycon = System.Configuration.ConfigurationManager.ConnectionStrings["OrderManagementSystemConnectionString"].ConnectionString;
+                //"Data Source=.;Initial Catalog=OrderManagementSystem;Integrated Security=True";
             String myquery = "Select VrNo,Jrn_Type,CompanyName,Description,BillAmount,Date from BillReceive where VrNo=" + Request.QueryString["VrNo"];
             SqlConnection con = new SqlConnection(mycon);
             SqlCommand cmd = new SqlCommand();

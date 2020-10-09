@@ -10,13 +10,15 @@ using System.Configuration;
 
 public partial class BillTable : System.Web.UI.Page
 {
-    SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=OrderManagementSystem;Integrated Security=True");
+    SqlConnection con = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["OrderManagementSystemConnectionString"].ConnectionString
+        //"Data Source=.;Initial Catalog=OrderManagementSystem;Integrated Security=True"
+    );
 
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Page.IsPostBack == false)
         {
-            string sql = "SELECT DISTINCT [CompanyName] FROM [BillReceive] WHERE (Jrn_Type = N'Receive')";
+            string sql = "SELECT DISTINCT [CompanyName] FROM [BillReceive] WHERE (Jrn_Type = N'Received')";
             SqlDataAdapter da = new SqlDataAdapter(sql, con);
             DataSet ds = new DataSet();
             da.Fill(ds, "s");

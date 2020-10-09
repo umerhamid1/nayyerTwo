@@ -19,6 +19,8 @@
 		<link rel="stylesheet" href="css/skins/default.css" />
 		<link rel="stylesheet" href="css/custom.css"/>
 		<script src="vendor/modernizr/modernizr.js"></script>
+
+        <link href="Style%20Sheet/GridviewStyleSheet.css" rel="stylesheet" />
    
 </asp:Content>
 
@@ -29,12 +31,12 @@
                                 <div style="margin-left:400px;">
 								    <section class="card">
 									    <header class="card-header">
-										    <h5 class="card-title" >Customer Bill List In Account</h5>
+										    <h5 class="card-title">Party Bill List In Account</h5>
 									    </header>
 									
                                         <div class="card-body">
                                             <div class="form-group row">
-											    <label class="col-sm-4 control-label text-sm-right pt-2" style="font-size:15px;">Company Name <span class="required">*</span></label>
+											    <label class="col-sm-4 control-label text-sm-right pt-2" style="font-size:15px;">Party Name <span class="required">*</span></label>
 											    <div class="col-sm-8">
                                                     <asp:DropDownList ID="DropDownList1" runat="server" data-plugin-selectTwo class="form-control populate" Width="275px"></asp:DropDownList>
 											        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="DropDownList1" ErrorMessage="This field is required." InitialValue="Choose a Name" ForeColor="Red"></asp:RequiredFieldValidator>
@@ -61,36 +63,36 @@
     
     <center>
         <asp:Panel ID="Panel1" runat="server">
-            <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="3" DataKeyNames="VrNo"  Width="1200px" DataSourceID="SqlDataSource1" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellSpacing="2" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" >
-               
+           
+            <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="VrNo" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" Width="1000px" CssClass="cssgridview" AlternatingRowStyle-CssClass="alt">
                 <Columns>
                     <asp:BoundField DataField="VrNo" HeaderText="Vr No" SortExpression="VrNo" >
-                    <HeaderStyle Height="35px" Font-Bold="True" Font-Size="12pt" />
-                    <ItemStyle Height="35px" Font-Size="11pt" />
+                        <HeaderStyle VerticalAlign="Middle" Height="30px" Font-Bold="True" Font-Size="12pt" />
+                        <ItemStyle Height="25px" Font-Size="11pt" />
                     </asp:BoundField>
                     <asp:BoundField DataField="Jrn_Type" HeaderText="Jrn Type" SortExpression="Jrn_Type">
-                    <HeaderStyle Height="35px" Font-Bold="True" Font-Size="12pt" />
-                    <ItemStyle Height="35px" Font-Size="11pt" />
+                        <HeaderStyle VerticalAlign="Middle" Height="30px" Font-Bold="True" Font-Size="12pt" />
+                        <ItemStyle Height="25px" Font-Size="11pt" />
                     </asp:BoundField>
-                    <asp:BoundField DataField="CompanyName" HeaderText="Company Name" SortExpression="CompanyName" >
-                    <HeaderStyle Height="35px" Font-Bold="True" Font-Size="12pt" />
-                    <ItemStyle Height="35px" Font-Size="11pt" />
+                    <asp:BoundField DataField="CompanyName" HeaderText="Party Name" SortExpression="CompanyName">
+                        <HeaderStyle VerticalAlign="Middle" Height="30px" Font-Bold="True" Font-Size="12pt" />
+                        <ItemStyle Height="25px" Font-Size="11pt" />
                     </asp:BoundField>
                     <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description">
-                    <HeaderStyle Height="35px" Font-Bold="True" Font-Size="12pt" />
-                    <ItemStyle Height="35px" Font-Size="11pt" />
+                        <HeaderStyle VerticalAlign="Middle" Height="30px" Font-Bold="True" Font-Size="12pt" />
+                        <ItemStyle Height="25px" Font-Size="11pt" />
                     </asp:BoundField>
                     <asp:BoundField DataField="BillAmount" HeaderText="Bill Amount" SortExpression="BillAmount">
-                    <HeaderStyle Height="35px" Font-Bold="True" Font-Size="12pt" />
-                    <ItemStyle Height="35px" Font-Size="11pt"/>
+                        <HeaderStyle VerticalAlign="Middle" Height="30px" Font-Bold="True" Font-Size="12pt" />
+                        <ItemStyle Height="25px" Font-Size="11pt" />
                     </asp:BoundField>
-                    <asp:BoundField DataField="Date" HeaderText="Date" DataFormatString="{0:MM-dd-yyyy}" HtmlEncode="false" SortExpression="Date">
-                    <HeaderStyle Height="35px" Font-Bold="True" Font-Size="12pt" />
-                    <ItemStyle Height="35px" Font-Size="11pt" />
+                    <asp:BoundField DataField="Date" HeaderText="Date" DataFormatString="{0:dd-MM-yyyy}" HtmlEncode="false" SortExpression="Date">
+                        <HeaderStyle VerticalAlign="Middle" Height="30px" Font-Bold="True" Font-Size="12pt" />
+                        <ItemStyle Height="25px" Font-Size="11pt" />
                     </asp:BoundField>
                     <asp:CommandField ShowSelectButton="True" HeaderText="Action" SelectText="Edit" >
-                        <HeaderStyle Height="35px" Font-Bold="True" Font-Size="12pt" />
-                        <ItemStyle Font-Bold="True" ForeColor="#993300" Font-Size="11pt"/>
+                        <HeaderStyle VerticalAlign="Middle" Height="30px" Font-Bold="True" Font-Size="12pt" />
+                        <ItemStyle Height="25px" Font-Size="11pt" Font-Bold="True" />
                     </asp:CommandField>
                 </Columns>
                 <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
@@ -102,9 +104,9 @@
                 <SortedAscendingHeaderStyle BackColor="#B95C30" />
                 <SortedDescendingCellStyle BackColor="#F1E5CE" />
                 <SortedDescendingHeaderStyle BackColor="#93451F" />
-
             </asp:GridView>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:OrderManagementSystemConnectionString %>" SelectCommand="SELECT [VrNo], [Jrn_Type], [CompanyName], [Description], [BillAmount], [Date] FROM [BillReceive] WHERE ([Jrn_Type] = @Jrn_Type)">
+
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:OrderManagementSystemConnectionString %>" SelectCommand="SELECT [VrNo], [Jrn_Type], [CompanyName], [Description], [BillAmount], [Date] FROM [BillReceive] WHERE ([Jrn_Type] = @Jrn_Type) ORDER BY [VrNo]">
                 <SelectParameters>
                     <asp:ControlParameter ControlID="GridView1" DefaultValue="Sale" Name="Jrn_Type" PropertyName="SelectedValue" Type="String" />
                 </SelectParameters>
@@ -114,36 +116,36 @@
 
     <center>
         <asp:Panel ID="Panel2" runat="server">
-            <asp:GridView ID="GridView2" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="VrNo" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataSourceID="SqlDataSource2" Width="1200px" CellSpacing="2" OnSelectedIndexChanged="GridView2_SelectedIndexChanged">
+            <asp:GridView ID="GridView2" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="VrNo" DataSourceID="SqlDataSource2" OnSelectedIndexChanged="GridView2_SelectedIndexChanged" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" Width="1000px" CssClass="cssgridview" AlternatingRowStyle-CssClass="alt">
 
                 <Columns>
-                    <asp:BoundField DataField="VrNo" HeaderText="VrNo" SortExpression="VrNo" >
-                    <HeaderStyle Height="35px" Font-Bold="True" Font-Size="12pt" />
-                    <ItemStyle Height="35px" Font-Size="11pt" />
+                    <asp:BoundField DataField="VrNo" HeaderText="Vr No" SortExpression="VrNo" >
+                        <HeaderStyle VerticalAlign="Middle" Height="30px" Font-Bold="True" Font-Size="12pt" />
+                        <ItemStyle Height="25px" Font-Size="11pt" />
                     </asp:BoundField>
-                    <asp:BoundField DataField="Jrn_Type" HeaderText="Jrn Type" SortExpression="Jrn_Type" >
-                    <HeaderStyle Height="35px" Font-Bold="True" Font-Size="12pt" />
-                    <ItemStyle Height="35px" Font-Size="11pt" />
+                    <asp:BoundField DataField="Jrn_Type" HeaderText="Jrn Type" SortExpression="Jrn_Type">
+                        <HeaderStyle VerticalAlign="Middle" Height="30px" Font-Bold="True" Font-Size="12pt" />
+                        <ItemStyle Height="25px" Font-Size="11pt" />
                     </asp:BoundField>
-                    <asp:BoundField DataField="CompanyName" HeaderText="Company Name" SortExpression="CompanyName" >
-                    <HeaderStyle Height="35px" Font-Bold="True" Font-Size="12pt" />
-                    <ItemStyle Height="35px" Font-Size="11pt" />
+                    <asp:BoundField DataField="CompanyName" HeaderText="Party Name" SortExpression="CompanyName">
+                        <HeaderStyle VerticalAlign="Middle" Height="30px" Font-Bold="True" Font-Size="12pt" />
+                        <ItemStyle Height="25px" Font-Size="11pt" />
                     </asp:BoundField>
-                    <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" >
-                    <HeaderStyle Height="35px" Font-Bold="True" Font-Size="12pt" />
-                    <ItemStyle Height="35px" Font-Size="11pt" />
+                    <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description">
+                        <HeaderStyle VerticalAlign="Middle" Height="30px" Font-Bold="True" Font-Size="12pt" />
+                        <ItemStyle Height="25px" Font-Size="11pt" />
                     </asp:BoundField>
-                    <asp:BoundField DataField="BillAmount" HeaderText="Bill Amount" SortExpression="BillAmount" >
-                    <HeaderStyle Height="35px" Font-Bold="True" Font-Size="12pt" />
-                    <ItemStyle Height="35px" Font-Size="11pt" />
+                    <asp:BoundField DataField="BillAmount" HeaderText="Bill Amount" SortExpression="BillAmount">
+                        <HeaderStyle VerticalAlign="Middle" Height="30px" Font-Bold="True" Font-Size="12pt" />
+                        <ItemStyle Height="25px" Font-Size="11pt" />
                     </asp:BoundField>
-                    <asp:BoundField DataField="Date" HeaderText="Date" DataFormatString="{0:MM-dd-yyyy}" HtmlEncode="false" SortExpression="Date">
-                    <HeaderStyle Height="35px" Font-Bold="True" Font-Size="12pt" />
-                    <ItemStyle Height="35px" Font-Size="11pt" />
+                    <asp:BoundField DataField="Date" HeaderText="Date" DataFormatString="{0:dd-MM-yyyy}" HtmlEncode="false" SortExpression="Date">
+                        <HeaderStyle VerticalAlign="Middle" Height="30px" Font-Bold="True" Font-Size="12pt" />
+                        <ItemStyle Height="25px" Font-Size="11pt" />
                     </asp:BoundField>
                     <asp:CommandField ShowSelectButton="True" HeaderText="Action" SelectText="Edit" >
-                       <HeaderStyle Font-Size="12pt" />
-                        <ItemStyle Font-Bold="True" ForeColor="#993300" Font-Size="11pt"/>
+                        <HeaderStyle VerticalAlign="Middle" Height="30px" Font-Bold="True" Font-Size="12pt" />
+                        <ItemStyle Height="25px" Font-Size="11pt" Font-Bold="True" />
                     </asp:CommandField>
                 </Columns>
                 <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
@@ -155,9 +157,9 @@
                 <SortedAscendingHeaderStyle BackColor="#B95C30" />
                 <SortedDescendingCellStyle BackColor="#F1E5CE" />
                 <SortedDescendingHeaderStyle BackColor="#93451F" />
-
+               
             </asp:GridView>
-            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:OrderManagementSystemConnectionString %>" SelectCommand="SELECT [VrNo], [Jrn_Type], [CompanyName], [Description], [BillAmount], [Date] FROM [BillReceive] WHERE (([CompanyName] = @CompanyName) AND ([Jrn_Type] = @Jrn_Type))">
+            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:OrderManagementSystemConnectionString %>" SelectCommand="SELECT [VrNo], [Jrn_Type], [CompanyName], [Description], [BillAmount], [Date] FROM [BillReceive] WHERE (([CompanyName] = @CompanyName) AND ([Jrn_Type] = @Jrn_Type)) ORDER BY [VrNo]">
                 <SelectParameters>
                     <asp:ControlParameter ControlID="DropDownList1" Name="CompanyName" PropertyName="SelectedValue" Type="String" />
                     <asp:ControlParameter ControlID="GridView2" DefaultValue="Sale" Name="Jrn_Type" PropertyName="SelectedValue" Type="String" />
@@ -165,6 +167,7 @@
             </asp:SqlDataSource>
         </asp:Panel>
     </center>
+    
     <br />
 
     <!-- Vendor -->

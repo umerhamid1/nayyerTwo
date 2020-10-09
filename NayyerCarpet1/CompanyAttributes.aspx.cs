@@ -9,7 +9,9 @@ using System.Data.SqlClient;
 
 public partial class CustomerBill : System.Web.UI.Page
 {
-    SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=OrderManagementSystem;Integrated Security=True");
+    SqlConnection con = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["OrderManagementSystemConnectionString"].ConnectionString
+        //"Data Source=.;Initial Catalog=OrderManagementSystem;Integrated Security=True"
+        );
     string Id = "0";
 
     protected void Page_Load(object sender, EventArgs e)

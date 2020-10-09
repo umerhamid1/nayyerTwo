@@ -12,7 +12,9 @@ using System.Data;
 
 public partial class ForgotPassword : System.Web.UI.Page
 {
-    SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=OrderManagementSystem;Integrated Security=True");
+    SqlConnection con = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["OrderManagementSystemConnectionString"].ConnectionString
+        //"Data Source=.;Initial Catalog=OrderManagementSystem;Integrated Security=True"
+        );
     DataTable dt = new DataTable();
 
     protected void Page_Load(object sender, EventArgs e)
@@ -65,8 +67,9 @@ public partial class ForgotPassword : System.Web.UI.Page
             StringBuilder sb = new StringBuilder();
             sb.Append("Dear Friend,<br/> Click on below given link to Reset Your Password<br/> <br>");
             //sb.Append("<a href=http://localhost:57355/codesoluation/resetlink.aspx?username=" + GetUserEmail(txtemail.Text));
-            sb.Append("<a href=http://localhost:6937/RecoverPassword.aspx?username=" + GetUserEmail(txtemail.Text));
-
+            //sb.Append("<a href=http://localhost:6937/RecoverPassword.aspx?username=" + GetUserEmail(txtemail.Text));
+            sb.Append("<a href=https://nayyerkarachi.com/RecoverPassword.aspx?username=" + GetUserEmail(txtemail.Text));
+        
             sb.Append("&Email=" + txtemail.Text + ">Click Here to Change Your Password</a><br/>");
             sb.Append("<br><br>Thanks & Regards<br>NAYYER CARPETS Team");
             MailMessage message = new System.Net.Mail.MailMessage("NAYYER CARPETS KARACHI <Princerizwan985@gmail.com>", txtemail.Text.Trim(), "Reset Your Password ( NAYYER CARPETS KARACHI )", sb.ToString());

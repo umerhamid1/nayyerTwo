@@ -18,9 +18,9 @@
             <div>
                 <asp:Label ID="Label1" runat="server" width="98%" style="text-align: right;" ForeColor="White"></asp:Label>
             </div>
-            <div class="logo">NayyeR CarpeT</div>
+            <div class="logo">NAYYER CARPET</div>
             <ul>
-                <li><a href="CompanyTable.aspx">Company Table</a></li>
+                <li><a href="CompanyTable.aspx">Party Table</a></li>
                 <li><a href="BillTable.aspx">Bill Table</a></li>
                 <li><a href="ReceiveTable.aspx">Receive Table</a></li>
                 <li>

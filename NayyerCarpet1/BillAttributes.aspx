@@ -31,7 +31,7 @@
                             <div style="margin-left:400px;">
 								<section class="card">
 									<header class="card-header">
-										<h5 class="card-title" >Add New Customer Bill In Account</h5>
+										<h5 class="card-title" >Add New Party Bill In Account</h5>
 									</header>
 									
                                     <div class="card-body">
@@ -45,17 +45,19 @@
 										</div>
 
                                         <div class="form-group row">
-                                            <label class="col-sm-4 control-label text-sm-right pt-2" style="font-size:15px;">Company Name <span class="required">*</span></label>
+                                            <label class="col-sm-4 control-label text-sm-right pt-2" style="font-size:15px;">Party Name <span class="required">*</span></label>
 											<div class="col-sm-8">
                                                 <asp:DropDownList ID="DropDownList1" runat="server" data-plugin-selectTwo class="form-control populate" data-height="240" Width="275px"></asp:DropDownList>
 											    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="DropDownList1" ErrorMessage="This field is required." InitialValue="Choose a Name" ForeColor="Red"></asp:RequiredFieldValidator>
                                             </div>
 										</div>
 
-                                        <div class="form-group row">
+                                        <div class="fo
+                                            rm-group row">
                                            <label class="col-sm-4 control-label text-sm-right pt-2" style="font-size:15px;">Vr No <span class="required">*</span></label>
 											<div class="col-sm-8">
                                                 <asp:TextBox ID="txtB_Vr" runat="server" class="form-control" placeholder="  In Number" TextMode="Number" Width="275px"></asp:TextBox>
+                                                <asp:Label ID="lblVrNo" runat="server" ForeColor="Red" Font-Bold="true"></asp:Label>
 											    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="This field is required." ControlToValidate="txtB_Vr" ForeColor="Red"></asp:RequiredFieldValidator>
 											</div>
 										</div>

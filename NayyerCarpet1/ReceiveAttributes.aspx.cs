@@ -9,7 +9,9 @@ using System.Data.SqlClient;
 
 public partial class CustomerBill : System.Web.UI.Page
 {
-    SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=OrderManagementSystem;Integrated Security=True");
+    SqlConnection con = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["OrderManagementSystemConnectionString"].ConnectionString
+        //"Data Source=.;Initial Catalog=OrderManagementSystem;Integrated Security=True"
+    );
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -35,7 +37,14 @@ public partial class CustomerBill : System.Web.UI.Page
 
     protected void btnR_Submit_Click(object sender, EventArgs e)
     {
-        if (Page.IsValid)
+        //if (Page.IsValid)
+        //{
+        if (checkemail() == true)
+        {
+            lblVrNo.Text = "Your Vr No Already Registered !";
+            //txtB_Vr.BackColor = System.Drawing.Color.PaleGreen;
+        }
+        else
         {
             con.Open();
             SqlCommand cmd = new SqlCommand("Insert into BillReceive values('" + txtR_Vr.Text + "','" + lblR_Receive.Text + "','" + DropDownList1.Text + "','" + txtR_Description.Text + "','" + 0 + "','" + txtR_Amount.Text + "','" + txtR_Date.Text + "')", con);
@@ -45,6 +54,27 @@ public partial class CustomerBill : System.Web.UI.Page
 
             Response.Redirect("ReceiveTable.aspx");
         }
+    }
+
+    private Boolean checkemail()
+    {
+        Boolean emailavailable = false;
+        String mycon = "Data Source=.;Initial Catalog=OrderManagementSystem;Integrated Security=True";
+        String myquery = "Select * from BillReceive where VrNo='" + txtR_Vr.Text + "'";
+        SqlConnection con = new SqlConnection(mycon);
+        SqlCommand cmd = new SqlCommand();
+        cmd.CommandText = myquery;
+        cmd.Connection = con;
+        SqlDataAdapter da = new SqlDataAdapter();
+        da.SelectCommand = cmd;
+        DataSet ds = new DataSet();
+        da.Fill(ds);
+        if (ds.Tables[0].Rows.Count > 0)
+        {
+            emailavailable = true;
+        }
+        con.Close();
+        return emailavailable;
     }
 
     private void ClearTextBox()

@@ -11,7 +11,8 @@ using System.Configuration;
 
 public partial class BillTable : System.Web.UI.Page
 {
-    string strconn = @"Data Source=.;Initial Catalog=OrderManagementSystem;Integrated Security=True";
+    string strconn = System.Configuration.ConfigurationManager.ConnectionStrings["OrderManagementSystemConnectionString"].ConnectionString;
+//@"Data Source=.;Initial Catalog=OrderManagementSystem;Integrated Security=True";
 
     protected void Page_Load(object sender, EventArgs e)
     {
