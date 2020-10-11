@@ -33,6 +33,10 @@ public partial class CustomerBill : System.Web.UI.Page
         {
             Response.Redirect("Login.aspx");
         }
+        //else
+        //{
+        //    Label1.Text = "User Email " + Session["Email"].ToString();
+        //} 
     }
 
     protected void btnB_Submit_Click(object sender, EventArgs e)
@@ -52,18 +56,17 @@ public partial class CustomerBill : System.Web.UI.Page
             cmd.ExecuteNonQuery();
             con.Close();
             ClearTextBox();
-          
+
             Response.Redirect("BillTable.aspx");
-            //}
         }
     }
 
     private Boolean checkemail()
     {
         Boolean emailavailable = false;
-        String mycon = "Data Source=.;Initial Catalog=OrderManagementSystem;Integrated Security=True";
+      //  String mycon = "Data Source=.;Initial Catalog=OrderManagementSystem;Integrated Security=True";
         String myquery = "Select * from BillReceive where VrNo='" + txtB_Vr.Text + "'";
-        SqlConnection con = new SqlConnection(mycon);
+        //SqlConnection con = new SqlConnection(mycon);
         SqlCommand cmd = new SqlCommand();
         cmd.CommandText = myquery;
         cmd.Connection = con;
@@ -78,7 +81,7 @@ public partial class CustomerBill : System.Web.UI.Page
         con.Close();
         return emailavailable;
     }
-        
+
     private void ClearTextBox()
     {
         txtB_Vr.Text = "";
@@ -88,3 +91,5 @@ public partial class CustomerBill : System.Web.UI.Page
         txtB_Date.Text = "";
     }
 }
+
+    

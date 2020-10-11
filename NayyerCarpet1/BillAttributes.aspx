@@ -20,7 +20,6 @@
 		<link rel="stylesheet" href="css/custom.css"/>
 		<script src="vendor/modernizr/modernizr.js"></script>
     
-        <%--g--%>    
 
 </asp:Content>
 
@@ -53,13 +52,12 @@
                                             </div>
 										</div>
 
-                                        <div class="fo
-                                            rm-group row">
+                                        <div class="form-group row">
                                            <label class="col-sm-4 control-label text-sm-right pt-2" style="font-size:15px;">Vr No <span class="required">*</span></label>
 											<div class="col-sm-8">
                                                 <asp:TextBox ID="txtB_Vr" runat="server" class="form-control" placeholder="  In Number" TextMode="Number" Width="275px"></asp:TextBox>
-                                                <asp:Label ID="lblVrNo" runat="server" ForeColor="Red" Font-Bold="true"></asp:Label>
-											    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="This field is required." ControlToValidate="txtB_Vr" ForeColor="Red"></asp:RequiredFieldValidator>
+											    <asp:Label ID="lblVrNo" runat="server" ForeColor="Red" Font-Bold="true"></asp:Label>
+												<asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="This field is required." ControlToValidate="txtB_Vr" ForeColor="Red"></asp:RequiredFieldValidator>
 											</div>
 										</div>
 

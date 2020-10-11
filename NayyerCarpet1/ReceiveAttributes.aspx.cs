@@ -59,9 +59,10 @@ public partial class CustomerBill : System.Web.UI.Page
     private Boolean checkemail()
     {
         Boolean emailavailable = false;
-        String mycon = "Data Source=.;Initial Catalog=OrderManagementSystem;Integrated Security=True";
+        //UMER COMMENT BECAUSE WEHN DEPLOY TO SERVER WEBSITE IS CRASH
+        //String mycon = "Data Source=.;Initial Catalog=OrderManagementSystem;Integrated Security=True";
         String myquery = "Select * from BillReceive where VrNo='" + txtR_Vr.Text + "'";
-        SqlConnection con = new SqlConnection(mycon);
+        ////SqlConnection con = new SqlConnection(mycon);
         SqlCommand cmd = new SqlCommand();
         cmd.CommandText = myquery;
         cmd.Connection = con;

@@ -18,7 +18,7 @@
             <div>
                 <asp:Label ID="Label1" runat="server" width="98%" style="text-align: right;" ForeColor="White"></asp:Label>
             </div>
-            <div class="logo">NAYYER CARPET</div>
+            <div class="logo">NayyeR CarpeT</div>
             <ul>
                 <li><a href="CompanyTable.aspx">Party Table</a></li>
                 <li><a href="BillTable.aspx">Bill Table</a></li>
@@ -26,8 +26,8 @@
                 <li>
                     <a href="#">Reports</a>
                     <ul>
-                        <li><a href="GeneralLedger1.aspx">General Ledger 1</a></li>
-                        <li><a href="GeneralLedger2.aspx">General Ledger 2</a></li>
+                        <li><a href="GeneralLedger1.aspx">Party Statement</a></li>
+                        <li><a href="GeneralLedger2.aspx">Party Summary</a></li>
                     </ul>
                 </li>
                 <li><asp:LinkButton CssClass="linkbuttonCss" ID="btn_LogOut" runat="server" OnClick="btn_LogOut_Click" CausesValidation="false">Logout</asp:LinkButton></li>

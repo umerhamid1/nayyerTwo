@@ -6,7 +6,8 @@
     box-sizing:border-box;
 }
 
-body{
+body {
+    font-family: 'Comic Sans MS';
     /*background-color:ThreeDHighlight;*/
 }
 

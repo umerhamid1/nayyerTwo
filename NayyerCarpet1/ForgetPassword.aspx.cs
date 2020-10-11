@@ -47,29 +47,50 @@ public partial class ForgotPassword : System.Web.UI.Page
         }
         con.Close();
     }
+    protected void SendMail(string password , string email)
+    {
+        var fromAddress = "nayyerkarachi@gmail.com";
+        var toAddress = email;
+        const string fromPassword = "nayyerkarachi1!@";
+        string subject = "Forgot Password ( NAYYER CARPETS KARACHI )";
+        string body = "Dear Friend, Your Password is '"+password+"' \n\n\nThanks & Regards\nNAYYER CARPETS Team";
+      
+
+
+        try
+        {
+            using (MailMessage mm = new MailMessage(fromAddress, toAddress))
+            {
+
+                mm.Subject = subject;
+                mm.Body = body;
+
+                mm.IsBodyHtml = false;
+                SmtpClient smtp = new SmtpClient();
+                smtp.Host = "smtp.gmail.com";
+                smtp.EnableSsl = true;
+                NetworkCredential NetworkCred = new NetworkCredential(fromAddress, fromPassword);
+                smtp.UseDefaultCredentials = true;
+                smtp.Credentials = NetworkCred;
+                smtp.Port = 587;
+                smtp.Send(mm);
+
+            }
+        }
+        catch (Exception ex)
+        {
+
+            Response.Write("Error" + ex.Message);
+        }
+    }
+
+
+
 
     private void sendpassword(String password, String email)
     {
-        SmtpClient smtp = new SmtpClient();
-        smtp.Host = "smtp.gmail.com";
-        smtp.Port = 587;
-        smtp.Credentials = new System.Net.NetworkCredential("Princerizwan985@gmail.com", "mumTAZ890");
-        smtp.EnableSsl = true;
-        MailMessage msg = new MailMessage();
-        msg.Subject = "Forgot Password ( NAYYER CARPETS KARACHI )";
-        msg.Body = "Dear Friend, Your Password is  " + password + "\n\n\nThanks & Regards\nNAYYER CARPETS Team";
-        string toaddress = txtemail.Text;
-        msg.To.Add(toaddress);
-        string fromaddress = "NAYYER CARPETS KARACHI <Princerizwan985@gmail.com>";
-        msg.From = new MailAddress(fromaddress);
-        try
-        {
-            smtp.Send(msg);
-        }
-        catch
-        {
-            throw;
-        }
+        SendMail(password,email);
+    
     }
+
 }
-   

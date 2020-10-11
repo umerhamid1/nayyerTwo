@@ -36,12 +36,14 @@
                                     <div class="card-body">
 
                                         <div class="form-group row">
+
 											<label class="col-sm-4 control-label text-sm-right pt-2" style="font-size:15px;">Jrn Type</label>
 											<div class="col-sm-8">
 											    <asp:Label ID="lblR_Receive" runat="server" Text="Received" style="font-size:15px; font-weight: 700;"  ></asp:Label>
                                                 <div style="color: #009933">Fixed Value.</div>
 											</div>
 										</div>
+									
 
                                         <div class="form-group row">
 											<label class="col-sm-4 control-label text-sm-right pt-2" style="font-size:15px;">Party Name <span class="required">*</span></label>
@@ -55,8 +57,8 @@
 											<label class="col-sm-4 control-label text-sm-right pt-2" style="font-size:15px;">Vr No <span class="required">*</span></label>
 											<div class="col-sm-8">
                                                 <asp:TextBox ID="txtR_Vr" runat="server" class="form-control" placeholder="  In Number" TextMode="Number" Width="275px"></asp:TextBox>
-                                                <asp:Label ID="lblVrNo" runat="server" ForeColor="Red" Font-Bold="true"></asp:Label>
-											    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="This field is required." ControlToValidate="txtR_Vr" ForeColor="Red"></asp:RequiredFieldValidator>
+											    <asp:Label ID="lblVrNo" runat="server" ForeColor="Red" Font-Bold="true"></asp:Label>
+												<asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="This field is required." ControlToValidate="txtR_Vr" ForeColor="Red"></asp:RequiredFieldValidator>
 											</div>
 										</div>
 

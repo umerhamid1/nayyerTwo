@@ -1,35 +1,39 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30413.136
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "NayyerCarpet1(1)", "NayyerCarpet1\", "{A10D6706-23B3-4852-89BC-AEF5381C1D40}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "NayyerCarpet1", "NayyerCarpet1\", "{A10D6706-23B3-4852-89BC-AEF5381C1D40}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_50817"
-		Debug.AspNetCompiler.PhysicalPath = "..\..\..\Downloads\ZipFile\nayyerTwo\NayyerCarpet1\"
+		Debug.AspNetCompiler.PhysicalPath = "NayyerCarpet1\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50817\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.VirtualPath = "/localhost_50817"
-		Release.AspNetCompiler.PhysicalPath = "..\..\..\Downloads\ZipFile\nayyerTwo\NayyerCarpet1\"
+		Release.AspNetCompiler.PhysicalPath = "NayyerCarpet1\"
 		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50817\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "50817"
+		SlnRelativePath = "NayyerCarpet1\"
 	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{A10D6706-23B3-4852-89BC-AEF5381C1D40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A10D6706-23B3-4852-89BC-AEF5381C1D40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A10D6706-23B3-4852-89BC-AEF5381C1D40}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{A10D6706-23B3-4852-89BC-AEF5381C1D40}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

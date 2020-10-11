@@ -32,7 +32,7 @@
                             <div style="margin-left:400px;">
 								<section class="card">
 									<header class="card-header">
-										<h5 class="card-title" >General Ledger 2</h5>
+										<h5 class="card-title" >Party Summary</h5>
 									</header>
 									
                                     <div class="card-body">

@@ -32,7 +32,7 @@
                             <div style="margin-left:400px;">
 								<section class="card">
 									<header class="card-header">
-										<h5 class="card-title" >General Ledger 1</h5>
+										<h5 class="card-title" >Party Statement</h5>
 									</header>
 									
                                     <div class="card-body">
@@ -63,14 +63,17 @@
 
                                          <div class="form-group row">
 											<label class="col-sm-4 control-label text-sm-right pt-2" style="font-size:15px;">Download Report</label>
+                                            
 											<div class="col-sm-8">
                                                 <asp:DropDownList ID="ddlFileFormat" runat="server"  class="form-control populate" Width="275px">
-                                                    <asp:ListItem Text="  Select Download File In "></asp:ListItem>
+                                                    <%--<asp:ListItem Text="  Select Download File In "></asp:ListItem>--%>
                                                     <asp:ListItem Text="PDF" Value="PDF"></asp:ListItem>  
                                                     <asp:ListItem Text="WORD" Value="WORD"></asp:ListItem>  
                                                     <asp:ListItem Text="EXCEL" Value="EXCEL"></asp:ListItem> 
                                                     <asp:ListItem Text="IMAGE" Value="IMAGE"></asp:ListItem> 
                                                 </asp:DropDownList>
+                                             <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="This field is required." ControlToValidate="ddlFileFormat" ForeColor="Red"></asp:RequiredFieldValidator>
+
 											</div>
                                         </div>
 

@@ -69,7 +69,6 @@ public partial class BillTable : System.Web.UI.Page
         ReportDataSource rds = new ReportDataSource("DataSet1", dt);
 
         ReportViewer1.LocalReport.DataSources.Add(rds);
-
         ReportViewer1.LocalReport.ReportPath = "GeneralLedger1.rdlc";
 
         ReportParameter[] rptParams = new ReportParameter[]{

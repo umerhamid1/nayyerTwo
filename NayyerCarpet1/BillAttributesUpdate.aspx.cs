@@ -88,6 +88,7 @@ public partial class CustomerBill : System.Web.UI.Page
     {
         if (Page.IsValid)
         {
+            
             con.Open();
             SqlCommand cmd1 = new SqlCommand("Insert into OldDataBillReceive values('" + TableName + "','" + 0 + "','" + VrNo + "','" + Jrn_Type + "','" + CompanyName + "','" + Description + "','" + bilAmt + "','" + 0 + "','" + Date + "','" + 0 + "','" + email + "','" + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + "')", con);
             cmd1.ExecuteNonQuery();

@@ -9,6 +9,7 @@ using System.Text;
 using System.Net.Mail;
 using System.Configuration;
 using System.Data;
+using System.Net;
 
 public partial class ForgotPassword : System.Web.UI.Page
 {
@@ -24,8 +25,8 @@ public partial class ForgotPassword : System.Web.UI.Page
 
     protected void btnReset_Click(object sender, EventArgs e)
     {
-        try
-        {
+        //try
+        //{
             Session["Email"] = txtemail.Text;
             SqlDataAdapter adp = new SqlDataAdapter("select * from Login where Email=@Email", con);
             con.Open();
@@ -51,40 +52,66 @@ public partial class ForgotPassword : System.Web.UI.Page
                 lblmsgerror2.Visible = false;
 
             }
-        }
-        catch (Exception ex)
-        {
+        //}
+        //catch (Exception ex)
+        //{
 
-        }
+        //}
     }
 
     // using this method we sent the mail to reciever
 
     private void SendEmail()
     {
+        //try
+        //{
+            
+        
+        var fromAddress = "nayyerkarachi@gmail.com";
+        var toAddress = GetUserEmail(txtemail.Text);
+        const string fromPassword = "nayyerkarachi1!@";
+        string subject = "Reset Password ( NAYYER CARPETS KARACHI )";
+        string body = "Dear Friend,  \n\n\nClick on below given link to Reset Your Password";
+        //body += "<a href=https://nayyerkarachi.com/RecoverPassword.aspx?username=" + GetUserEmail(txtemail.Text) +" &Email = " + txtemail.Text + " >  Click Here to Change Your Password </ a >  \n \n  ";
+        body += "<a href=http://localhost:50817/RecoverPassword.aspx?username=" + GetUserEmail(txtemail.Text) + " &Email = " + txtemail.Text + " >  Click Here to Change Your Password </ a > \n";
+        body += "   \n\n\n Thanks & Regards<br>\n NAYYER CARPETS Team ";
+
+
+
         try
         {
-            StringBuilder sb = new StringBuilder();
-            sb.Append("Dear Friend,<br/> Click on below given link to Reset Your Password<br/> <br>");
-            //sb.Append("<a href=http://localhost:57355/codesoluation/resetlink.aspx?username=" + GetUserEmail(txtemail.Text));
-            //sb.Append("<a href=http://localhost:6937/RecoverPassword.aspx?username=" + GetUserEmail(txtemail.Text));
-            sb.Append("<a href=https://nayyerkarachi.com/RecoverPassword.aspx?username=" + GetUserEmail(txtemail.Text));
-        
-            sb.Append("&Email=" + txtemail.Text + ">Click Here to Change Your Password</a><br/>");
-            sb.Append("<br><br>Thanks & Regards<br>NAYYER CARPETS Team");
-            MailMessage message = new System.Net.Mail.MailMessage("NAYYER CARPETS KARACHI <Princerizwan985@gmail.com>", txtemail.Text.Trim(), "Reset Your Password ( NAYYER CARPETS KARACHI )", sb.ToString());
-            SmtpClient smtp = new SmtpClient();
-            smtp.Host = "smtp.gmail.com";
-            smtp.Port = 587;
-            smtp.Credentials = new System.Net.NetworkCredential("Princerizwan985@gmail.com", "mumTAZ890");
-            smtp.EnableSsl = true;
-            message.IsBodyHtml = true;
-            smtp.Send(message);
+            using (MailMessage mm = new MailMessage(fromAddress, toAddress))
+            {
+
+                mm.Subject = subject;
+                mm.Body = body;
+
+                mm.IsBodyHtml = true;
+                SmtpClient smtp = new SmtpClient();
+                smtp.Host = "smtp.gmail.com";
+                smtp.EnableSsl = true;
+                NetworkCredential NetworkCred = new NetworkCredential(fromAddress, fromPassword);
+                smtp.UseDefaultCredentials = true;
+                smtp.Credentials = NetworkCred;
+                smtp.Port = 587;
+                smtp.Send(mm);
+
+            }
         }
         catch (Exception ex)
         {
 
+            Response.Write("Error" + ex.Message);
         }
+
+
+
+
+        //}
+        //catch (Exception ex)
+        //{
+
+        //}
     }
 
     private string GetUserEmail(string Email)
@@ -94,6 +121,12 @@ public partial class ForgotPassword : System.Web.UI.Page
         string username = cmd.ExecuteScalar().ToString();
         return username;
     }
+
+
+
+
+
+
 }
 
    
